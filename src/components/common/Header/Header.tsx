@@ -1,4 +1,4 @@
-import { NavItem, Nav, NavItemLink } from "components/common/Nav";
+import { NavMenuItem, Nav, NavLink, NavMenu } from "components/common/Nav";
 import { ReactComponent as Logo } from "assets/Logo.svg";
 import styles from "./Header.module.scss";
 
@@ -7,42 +7,44 @@ export const Header = () => {
     <header className={styles.header}>
       <Logo />
 
-      <Nav className={styles.nav}>
-        <NavItem className={styles.navItem}>
-          <NavItemLink href="/home" className={styles.navItemLink}>
-            Home
-          </NavItemLink>
-        </NavItem>
+      <Nav>
+        <NavMenu type="unordered" className={styles.navMenu}>
+          <NavMenuItem>
+            <NavLink href="/home" className={styles.navLink}>
+              Home
+            </NavLink>
+          </NavMenuItem>
 
-        <NavItem className={styles.navItem}>
-          <NavItemLink href="/about" className={styles.navItemLink}>
-            About
-          </NavItemLink>
-        </NavItem>
+          <NavMenuItem>
+            <NavLink href="/about" className={styles.navLink}>
+              About
+            </NavLink>
+          </NavMenuItem>
 
-        <NavItem className={styles.navItem}>
-          <NavItemLink href="/menu" className={styles.navItemLink}>
-            Menu
-          </NavItemLink>
-        </NavItem>
+          <NavMenuItem>
+            <NavLink href="/menu" className={styles.navLink}>
+              Menu
+            </NavLink>
+          </NavMenuItem>
 
-        <NavItem className={styles.navItem}>
-          <NavItemLink href="/reservations" className={styles.navItemLink}>
-            Reservations
-          </NavItemLink>
-        </NavItem>
+          <NavMenuItem>
+            <NavLink href="/reservations" className={styles.navLink}>
+              Reservations
+            </NavLink>
+          </NavMenuItem>
 
-        <NavItem className={styles.navItem}>
-          <NavItemLink href="/online-order" className={styles.navItemLink}>
-            Order Online
-          </NavItemLink>
-        </NavItem>
+          <NavMenuItem>
+            <NavLink href="/online-order" className={styles.navLink}>
+              Order Online
+            </NavLink>
+          </NavMenuItem>
 
-        <NavItem className={styles.navItem}>
-          <NavItemLink href="/login" className={styles.navItemLink}>
-            Login
-          </NavItemLink>
-        </NavItem>
+          <NavMenuItem>
+            <NavLink href="/login" className={styles.navLink}>
+              Login
+            </NavLink>
+          </NavMenuItem>
+        </NavMenu>
       </Nav>
     </header>
   );

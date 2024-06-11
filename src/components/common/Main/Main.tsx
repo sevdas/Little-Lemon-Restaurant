@@ -1,5 +1,15 @@
 import { PropsWithChildren } from "react";
 
-export const Main = ({ children }: PropsWithChildren) => {
-  return <main>{children}</main>;
+type MainProps = {
+  className?: string;
+};
+
+export const Main = ({ children, className }: PropsWithChildren<MainProps>) => {
+  // TODO: Temporary style
+
+  return (
+    <main className={className} style={{ height: "500px" }}>
+      {children}
+    </main>
+  );
 };

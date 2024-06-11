@@ -6,17 +6,11 @@
   padding: 1rem 2.5rem;
 }
 
-.nav {
-  & ul {
-    display: flex;
-    gap: 2rem;
-
-    & > .navItem {
-      list-style-type: none;
-    }
-  }
+.navMenu {
+  display: flex;
+  gap: 2rem;
 }
 
-.navItemLink {
+.navLink {
   text-decoration: none;
 }
