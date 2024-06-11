@@ -1,35 +1,47 @@
-// import { NavItem, Nav, NavItemLink } from "@/components/common/Nav/Nav";
-import { NavItem, Nav, NavItemLink } from "../Nav/Nav";
-import { ReactComponent as Logo } from "@/assets/Logo.svg";
+import { NavItem, Nav, NavItemLink } from "components/common/Nav";
+import { ReactComponent as Logo } from "assets/Logo.svg";
+import styles from "./Header.module.scss";
 
 export const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <Logo />
 
-      <Nav>
-        <NavItem>
-          <NavItemLink href="/home">Home</NavItemLink>
+      <Nav className={styles.nav}>
+        <NavItem className={styles.navItem}>
+          <NavItemLink href="/home" className={styles.navItemLink}>
+            Home
+          </NavItemLink>
         </NavItem>
 
-        <NavItem>
-          <NavItemLink href="/about">About</NavItemLink>
+        <NavItem className={styles.navItem}>
+          <NavItemLink href="/about" className={styles.navItemLink}>
+            About
+          </NavItemLink>
         </NavItem>
 
-        <NavItem>
-          <NavItemLink href="/menu">Menu</NavItemLink>
+        <NavItem className={styles.navItem}>
+          <NavItemLink href="/menu" className={styles.navItemLink}>
+            Menu
+          </NavItemLink>
         </NavItem>
 
-        <NavItem>
-          <NavItemLink href="/reservations">Reservations</NavItemLink>
+        <NavItem className={styles.navItem}>
+          <NavItemLink href="/reservations" className={styles.navItemLink}>
+            Reservations
+          </NavItemLink>
         </NavItem>
 
-        <NavItem>
-          <NavItemLink href="/online-order">Order Online</NavItemLink>
+        <NavItem className={styles.navItem}>
+          <NavItemLink href="/online-order" className={styles.navItemLink}>
+            Order Online
+          </NavItemLink>
         </NavItem>
 
-        <NavItem>
-          <NavItemLink href="/login">Login</NavItemLink>
+        <NavItem className={styles.navItem}>
+          <NavItemLink href="/login" className={styles.navItemLink}>
+            Login
+          </NavItemLink>
         </NavItem>
       </Nav>
     </header>

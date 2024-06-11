@@ -1,24 +1,41 @@
 import { PropsWithChildren } from "react";
 
-export const Nav = ({ children }: PropsWithChildren) => {
+type NavProps = {
+  className?: string;
+};
+
+export const Nav = ({ children, className }: PropsWithChildren<NavProps>) => {
   return (
-    <nav>
+    <nav className={className}>
       <ul>{children}</ul>
     </nav>
   );
 };
 
-export const NavItem = ({ children }: PropsWithChildren) => {
-  return <li>{children}</li>;
+type NavItem = {
+  className?: string;
+};
+
+export const NavItem = ({
+  children,
+  className,
+}: PropsWithChildren<NavItem>) => {
+  return <li className={className}>{children}</li>;
 };
 
 type NavItemLinkProps = {
   href: string;
+  className?: string;
 };
 
 export const NavItemLink = ({
   children,
   href,
+  className,
 }: PropsWithChildren<NavItemLinkProps>) => {
-  return <a href={href}>{children}</a>;
+  return (
+    <a href={href} className={className}>
+      {children}
+    </a>
+  );
 };
