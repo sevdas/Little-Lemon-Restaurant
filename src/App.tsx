@@ -1,24 +1,26 @@
 import "./App.css";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { Main } from "./components/Main";
+import { NavItem, Nav } from "./components/Nav/Nav";
+import { ReactComponent as Logo } from "./assets/Logo.svg";
 
 const App = () => {
   return (
-    <main>
+    <Main>
       <Header>
-        Branding and Logo
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Menu</li>
-            <li>Reservations</li>
-            <li>Order Online</li>
-            <li>Login</li>
-          </ul>
-        </nav>
+        <Logo />
+        <Nav>
+          <NavItem>Home</NavItem>
+          <NavItem>About</NavItem>
+          <NavItem>Menu</NavItem>
+          <NavItem>Reservations</NavItem>
+          <NavItem>Order Online</NavItem>
+          <NavItem>Login</NavItem>
+        </Nav>
       </Header>
-      <footer>I am footer</footer>
-    </main>
+      <Footer>I am footer</Footer>
+    </Main>
   );
 };
 
