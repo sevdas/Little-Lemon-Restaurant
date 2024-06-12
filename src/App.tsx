@@ -1,12 +1,12 @@
 import { Footer } from "./components/common/Footer";
-import { Header } from "./components/common/Header";
+import { NavBar } from "./components/common/NavBar";
 import { Main } from "./components/common/Main";
 import "styles/globals/_normalize.scss";
 
 const App = () => {
   return (
     <>
-      <Header />
+      <NavBar />
       <Main />
       <Footer />
     </>
