@@ -4,8 +4,9 @@ import { ReactComponent as Logo } from "assets/Logo.svg";
 import { ReactComponent as FacebookIcon } from "assets/Facebook.svg";
 import { ReactComponent as TikTokIcon } from "assets/TikTok.svg";
 import { ReactComponent as PinterestIcon } from "assets/Pinterest.svg";
-import styles from "./Footer.module.scss";
 import { GridLayout } from "components/common/GridLayout/GridLayout";
+
+import styles from "./FooterNav.module.scss";
 
 export const FooterNav = () => {
   return (
@@ -14,7 +15,11 @@ export const FooterNav = () => {
 
       <MenuNav className={styles.menuNav}>
         <MenuList type="unordered">
-          <h6>Doormat Navigation</h6>
+          <h6 className={styles.heading}>
+            Doormat
+            <br />
+            Navigation
+          </h6>
           <MenuItem>
             <MenuLink href="/hello">Hello</MenuLink>
           </MenuItem>
@@ -41,9 +46,13 @@ export const FooterNav = () => {
         </MenuList>
 
         <section>
-          <h6>Contact</h6>
+          <h6 className={styles.heading}>Contact</h6>
           <address>
-            <MenuItem>169 Church Rd, London SW13 9HR</MenuItem>
+            <MenuItem>
+              169 Church Rd,
+              <br />
+              London SW13 9HR
+            </MenuItem>
             <MenuItem>
               <MenuLink href="tel:+123456789">Phone number</MenuLink>
             </MenuItem>
@@ -60,7 +69,7 @@ export const FooterNav = () => {
         </section>
 
         <section>
-          <h6>Social Media Links</h6>
+          <h6 className={styles.heading}>Social Media Links</h6>
 
           <MenuList type="ordered" className={styles.menuListSocial}>
             <MenuItem>
