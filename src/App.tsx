@@ -1,5 +1,5 @@
-import { FooterNav } from "components/common/navigation/FooterNav";
-import { HeaderNavBar } from "components/common/navigation/HeaderNavBar";
+import { FooterNav } from "components/common/FooterNav";
+import { HeaderNavBar } from "components/common/HeaderNavBar";
 import { Main } from "components/common/Main";
 import "styles/globals/_normalize.scss";
 

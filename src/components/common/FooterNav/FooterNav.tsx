@@ -1,14 +1,17 @@
-import { Footer } from "components/common/Footer";
 import { MenuNav, MenuList, MenuItem, MenuLink } from "components/common/Menu";
 import { ReactComponent as InstagramIcon } from "assets/Instagram.svg";
+import { ReactComponent as Logo } from "assets/Logo.svg";
 import { ReactComponent as FacebookIcon } from "assets/Facebook.svg";
 import { ReactComponent as TikTokIcon } from "assets/TikTok.svg";
 import { ReactComponent as PinterestIcon } from "assets/Pinterest.svg";
 import styles from "./Footer.module.scss";
+import { GridLayout } from "components/common/GridLayout/GridLayout";
 
 export const FooterNav = () => {
   return (
-    <Footer>
+    <GridLayout as="footer">
+      <Logo className={styles.logo} />
+
       <MenuNav className={styles.menuNav}>
         <MenuList type="unordered">
           <h6>Doormat Navigation</h6>
@@ -106,6 +109,6 @@ export const FooterNav = () => {
           </MenuList>
         </section>
       </MenuNav>
-    </Footer>
+    </GridLayout>
   );
 };

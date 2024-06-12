@@ -1,0 +1,19 @@
+.logo {
+  grid-column: 3 / span 2;
+}
+
+.menuNav {
+  grid-column: 5 / span 6;
+  align-items: start;
+  grid-auto-flow: column;
+  display: grid;
+}
+
+.menuLink {
+  text-decoration: none;
+}
+
+.menuListSocial {
+  display: flex;
+  gap: 1rem;
+}
