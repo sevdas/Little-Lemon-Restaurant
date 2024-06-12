@@ -2,40 +2,43 @@ import { PropsWithChildren } from "react";
 
 type ListType = "unordered" | "ordered";
 
-type NavProps = {
+type MenuNavProps = {
   className?: string;
 };
 
-export const Nav = ({ children, className }: PropsWithChildren<NavProps>) => {
+export const MenuNav = ({
+  children,
+  className,
+}: PropsWithChildren<MenuNavProps>) => {
   return <nav className={className}>{children}</nav>;
 };
 
-type NavListProps = {
+type MenuListProps = {
   type: ListType;
   className?: string;
 };
 
-export const NavMenu = ({
+export const MenuList = ({
   children,
   type,
   className,
-}: PropsWithChildren<NavListProps>) => {
+}: PropsWithChildren<MenuListProps>) => {
   const ListComponent = type === "unordered" ? "ul" : "ol";
   return <ListComponent className={className}>{children}</ListComponent>;
 };
 
-type NavItemProps = {
+type MenuItemProps = {
   className?: string;
 };
 
-export const NavMenuItem = ({
+export const MenuItem = ({
   children,
   className,
-}: PropsWithChildren<NavItemProps>) => {
+}: PropsWithChildren<MenuItemProps>) => {
   return <li className={className}>{children}</li>;
 };
 
-type NavItemLinkProps = {
+type MenuLinkProps = {
   href: string;
   className?: string;
 } & (
@@ -43,13 +46,13 @@ type NavItemLinkProps = {
   | { target?: "_self" | "_parent" | "_top"; rel?: string }
 );
 
-export const NavLink = ({
+export const MenuLink = ({
   children,
   href,
   target,
   rel,
   className,
-}: PropsWithChildren<NavItemLinkProps>) => {
+}: PropsWithChildren<MenuLinkProps>) => {
   // Improve security and performance by preventing the new page from gaining access to the page's window object via the window.opener property.
   return (
     <a href={href} target={target} rel={rel} className={className}>
