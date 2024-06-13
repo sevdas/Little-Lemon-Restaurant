@@ -1,0 +1,15 @@
+.menuList {
+  display: flex;
+
+  @media (min-width: 768px) {
+    gap: 2rem;
+  }
+
+  @media (min-width: 1200px) {
+    gap: 3rem;
+  }
+}
+
+.menuLink {
+  text-decoration: none;
+}

@@ -1,15 +1,12 @@
-import { FooterNav } from "components/common/FooterNav";
-import { HeaderNavBar } from "components/common/HeaderNavBar";
-import { Main } from "components/common/Main";
+import { Homepage } from "components/pages/Homepage/Homepage";
 import "styles/globals/_normalize.scss";
+import { Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
-      <HeaderNavBar />
-      <Main />
-      <FooterNav />
-    </>
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+    </Routes>
   );
 };
 

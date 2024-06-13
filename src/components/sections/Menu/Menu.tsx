@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import { Link } from "react-router-dom";
 
 type ListType = "unordered" | "ordered";
 
@@ -55,8 +56,12 @@ export const MenuLink = ({
 }: PropsWithChildren<MenuLinkProps>) => {
   // Improve security and performance by preventing the new page from gaining access to the page's window object via the window.opener property.
   return (
-    <a href={href} target={target} rel={rel} className={className}>
+    // <a href={href} target={target} rel={rel} className={className}>
+    //   {children}
+    // </a>
+
+    <Link to={href} className={className}>
       {children}
-    </a>
+    </Link>
   );
 };

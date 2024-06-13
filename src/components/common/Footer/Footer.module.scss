@@ -1,0 +1,32 @@
+.menuNav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    gap: 3rem;
+    flex-direction: row;
+  }
+
+  @media (min-width: 1200px) {
+    gap: 5rem;
+    flex-direction: row;
+  }
+}
+
+.menuListSocial {
+  display: flex;
+  gap: 1.25rem;
+}
+
+// TODO: Define color and font tokens - responsive
+.heading {
+  font-size: 1rem;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  color: grey;
+
+  @media (min-width: 768px) {
+    padding-bottom: 1.5rem;
+  }
+}

@@ -1,13 +1,20 @@
-import { MenuNav, MenuList, MenuItem, MenuLink } from "components/common/Menu";
-import { ReactComponent as Logo } from "assets/Logo.svg";
-import styles from "./HeaderNavBar.module.scss";
-import { GridLayout } from "components/common/GridLayout/GridLayout";
+import {
+  MenuNav,
+  MenuList,
+  MenuItem,
+  MenuLink,
+} from "components/sections/Menu";
+import styles from "./NavBar.module.scss";
+import { Header } from "components/common/Header";
+import clsx from "clsx";
 
-export const HeaderNavBar = () => {
+type NavBarProps = {
+  className?: string;
+};
+
+export const NavBar = ({ className }: NavBarProps) => {
   return (
-    <GridLayout as="header" className={styles.header}>
-      <Logo className={styles.logo} />
-
+    <Header className={clsx(styles.header, className)}>
       <MenuNav className={styles.menuNav}>
         <MenuList type="unordered" className={styles.menuList}>
           <MenuItem>
@@ -47,6 +54,6 @@ export const HeaderNavBar = () => {
           </MenuItem>
         </MenuList>
       </MenuNav>
-    </GridLayout>
+    </Header>
   );
 };
