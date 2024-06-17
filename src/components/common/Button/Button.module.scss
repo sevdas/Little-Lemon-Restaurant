@@ -1,0 +1,29 @@
+@import "/src/styles/globals/base";
+
+.button {
+  border: 1px solid;
+  border-radius: $ll-radius-md;
+  cursor: pointer;
+  transition: $ll-transition-default;
+}
+
+.primary {
+  color: whitesmoke;
+  background-color: $ll-button-primary-background-color;
+  border-color: $ll-button-primary-border-color;
+}
+
+.small {
+  padding: $ll-padding-sm;
+  font-size: $ll-font-size-sm;
+}
+
+.medium {
+  padding: $ll-padding-md;
+  font-size: $ll-font-size-md;
+}
+
+.large {
+  padding: $ll-padding-lg;
+  font-size: $ll-font-size-lg;
+}

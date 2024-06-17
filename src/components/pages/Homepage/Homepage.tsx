@@ -10,7 +10,7 @@ export const Homepage = () => {
   return (
     <div className={styles.container}>
       <NavBar className={styles.navbar} />
-      <Hero />
+      <Hero className={styles.hero} />
       <Highlights />
       <Testimonials />
       <About />
